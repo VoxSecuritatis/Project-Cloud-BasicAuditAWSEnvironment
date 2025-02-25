@@ -1,10 +1,10 @@
 # Project:  Performing a Basic Audit of an AWS Environment
 
-## DESCRIPTION
+## Description
 
 This project goes through the steps to perform basic audits of core AWS resources. It will use the AWS Management Console to understand how to audit the use of multiple AWS services, Amazon EC2, Amazon VPC, Amazon IAM, Amazon Security Groups, AWS CloudTrail and AWS CloudWatch. This project will help one to understand how they can extend existing auditing objectives related to organizational Governance, Asset Configuration, Logical Access Controls, Operating Systems, Databases and Applications security configurations within AWS. The skills learned help to provide visibility, testability and automated audit evidence gather capabilities.
 
-## OBJECTIVES
+## Objectives
 
 - Review user permissions in AWS IAM
 - Capture audit evidence using AWS IAM Policy Simulator
@@ -13,7 +13,7 @@ This project goes through the steps to perform basic audits of core AWS resource
 - Review Amazon CloudWatch performance metrics
 - Review raw Amazon CloudTrail logs within Amazon S3
 
-## AWS SERVICES USED
+## AWS Services Used
 
 - Amazon Elastic Compute Cloud (Amazon EC2)
 - Amazon Virtual Private Cloud (Amazon VPC)
