@@ -37,7 +37,7 @@ In this project, the auditor will launch IAM secure AWS Access Control in order 
 
    - **Access Keys**: Keys can be active or inactive and only administrators have the ability to inactivate or delete keys. If a user with limited permissions tried to deactivate or delete an access key, they would receive a message similar to the following:
 
-We encountered the following errors while processing your request: User:arn:aws:iam::222244443333:user/user-1_01 is not authorized to perform: iam:UpdateAccessKey on resource: user user-1_01
+We encountered the following errors while processing the request: User:arn:aws:iam::222244443333:user/user-1_01 is not authorized to perform: iam:UpdateAccessKey on resource: user user-1_01
 
    - **Signing Certificates**: Can be signed certificates, X.509 Certificate and/or third party tools (e.g. OpenSSL).
    - **Console password**: Users with access to the AWS Management Console require a password. Passwords can be generated and/or changed by administrators within the IAM dashboard. Passwords can be auto-generated or custom-generated based on organization preferences.
