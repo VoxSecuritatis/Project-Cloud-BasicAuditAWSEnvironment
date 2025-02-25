@@ -34,9 +34,18 @@ Launch the AWS Console:
 ### Review permissions
 
 1. At the top of the AWS Management Console, in the search bar, search for and choose IAM.
+
+<img src="https://imgur.com/UwO7osv.jpg" height="80%" width="80%" alt="Open IAM Console"/>
+
 2. In the navigation pane at the left of the page, under Access management, choose Users.
+
+<img src="https://imgur.com/zFDjtUM.jpg" height="80%" width="80%" alt="Select Users"/>
+
 3. On the Users page, choose the link for user-1 to view its details.
 4. Review the Summary section for information about your user.
+
+<img src="https://imgur.com/MFVjt7G.jpg" height="80%" width="80%" alt="User information"/>
+
 5. Select the Security credentials tab to review it. Here, the auditor can see how many access keys a user has, when an access key was created, whether a Multi-Factor Authentication (MFA) device is assigned, and more.
 
    - **Access Keys**: Keys can be active or inactive and only administrators have the ability to inactivate or delete keys. If a user with limited permissions tried to deactivate or delete an access key, they would receive a message similar to the following:
@@ -50,7 +59,13 @@ We encountered the following errors while processing the request: User:arn:aws:i
      - **Hardware Keyfob**: Tamper-evident hardware keyfob device provided by Gemalto, a 3rd-party provider.
      - **Hardware Display Card**: Tamper-evident hardware display card device provided by Gemalto, a 3rd-party provider.
 
+<img src="https://imgur.com/UI9vmoY.jpg" height="80%" width="80%" alt="Review Security Credentials 1"/>
+<img src="https://imgur.com/yC0wpSp.jpg" height="80%" width="80%" alt="Review Security Credentials 2"/>
+
 6. Choose the Groups tab.
+
+<img src="https://imgur.com/WYktLDZ.jpg" height="80%" width="80%" alt="Review User Groups"/>
+<img src="https://imgur.com/T8LkuRX.jpg" height="80%" width="80%" alt="Review Group Permissions"/>
 
 ### Run the IAM Policy Simulator
 
