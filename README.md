@@ -128,13 +128,27 @@ The following are basic characteristics of security groups:
 ### Review running Amazon EC2 instances
 
 14. At the top of the AWS Management Console, in the search bar, search for and choose EC2.
+
+<img src="https://imgur.com/KlJqESy.jpg" height="80%" width="80%" alt="Launch EC2 Console"/>
+
 15. In the navigation pane at the left of the page, under Instances, choose Instances. In this project environment, there are three running instances: Web Server, Bastion Host, and SQL Server.
+
+<img src="https://imgur.com/FyzMVg0.jpg" height="80%" width="80%" alt="EC2 instance collection"/>
 
 ### Review the web server security group
 
 16. In the navigation pane at the left of the page, under Network & Security, choose Security Groups.
+
+<img src="https://imgur.com/4pt917g.jpg" height="80%" width="80%" alt="EC2 WebServer Sec Group"/>
+
 17. Select WebServerSG.
+
+<img src="https://imgur.com/fGr08Po.jpg" height="80%" width="80%" alt="Web Server WebServerSG"/>
+
 18. In the details pane at the bottom of the page, choose the Inbound rules tab.
+
+<img src="https://imgur.com/3bUTnmQ.jpg" height="80%" width="80%" alt="EC2 WebServerSG select"/>
+
 19. Review the Inbound rules.
 
 > Note: The engineer can specify a number of different sources in security group rules, such as anywhere, a custom IP address or CIDR, My IP (the IP address of your current workstation), or specific security groups. The rules chosen to implement are a critical step towards running instances and services within Amazon EC2.
@@ -146,6 +160,8 @@ The following are basic characteristics of security groups:
 
 A bastion host is a special-purpose server on a network specifically designed and configured to withstand attacks. The computer generally hosts a single application (such as a proxy server) and all other services are removed or limited to reduce threats to the computer. It is hardened in this manner primarily due to its location and purpose, which is typically on the outside of the firewall and usually involves access from untrusted networks or computers.
 
+<img src="https://imgur.com/2R4UyfN.jpg" height="80%" width="80%" alt="EC2 BastionSG select"/>
+
 22. To review the inbound and outbound rules, choose the Inbound rules and Outbound rules tabs respectively.
 
 ### Review the SQL server security group
@@ -154,6 +170,8 @@ A bastion host is a special-purpose server on a network specifically designed an
 24. Select SQLSG.
 25. To review the inbound rules, choose the Inbound rules tab. Notice that the inbound rules are configured with a custom source—a security group ID from this account.
 26. To review the outbound rules, choose the Outbound rules tab.
+
+<img src="https://imgur.com/kd1CLwp.jpg" height="80%" width="80%" alt="EC2 SQL Server select and review"/>
 
 ### Collecting audit evidence
 
@@ -176,7 +194,9 @@ When the engineer launches an instance in a VPC, they can associate one or more 
 27. In the navigation pane at the left of the page, under Instances, choose Instances.
 28. Select Web Server. The Details pane appears below the list of instances that shows information about the instance you selected.
 29. In the Instance summary section, locate the VPC ID value and copy it to your favorite text editor.
-   
+
+<img src="https://imgur.com/5P4yeRn.jpg" height="80%" width="80%" alt="VPC Instance ID"/>
+
 > Note: The VPC ID should look similar to: `vpc-0385934dd2bef2354`. Every VPC is associated with a VPC ID. In the next section, you identify the VPC that is associated with this VPC ID.
 
 ### Review existing VPCs, subnets, and NACLs
@@ -184,16 +204,25 @@ When the engineer launches an instance in a VPC, they can associate one or more 
 In this section, the auditor reviews existing VPCs, subnets, and Network ACL capabilities within a Virtual Private Cloud.
 
 30. At the top of the AWS Management Console, in the search bar, search for and choose VPC.
+
+<img src="https://imgur.com/2tSuuQR.jpg" height="80%" width="80%" alt="Launch VPC"/>
+
 31. In the navigation pane at the left of the page, under Virtual private cloud, choose Your VPCs.
 32. Select Lab VPC. The Details pane appears below the list of VPCs that shows the configuration elements for the selected VPC.
 33. Notice that the VPC ID value is the same VPC ID value that was copied to your text editor.
 34. In the Details section, choose the Main network ACL link.
+
+<img src="https://imgur.com/az3GFVr.jpg" height="80%" width="80%" alt="VPC select"/>
+
 35. On the Network ACLs page, select the Network ACL which has a Default parameter value of Yes.
    
 > Note: There should only be one choice.
 
 36. To review the inbound and outbound rules, in the Details pane at the bottom of the page, choose the Inbound rules and Outbound rules tabs respectively.
-   
+
+<img src="https://imgur.com/KVGKJe3.jpg" height="80%" width="80%" alt="VPC Inbound rules"/>
+<img src="https://imgur.com/swiKZ9Y.jpg" height="80%" width="80%" alt="VPC Outbound rules"/>
+
 > Note: As audit evidence, you can see how the VPC is using ACLs to communicate with an external network via explicit protocols.
 
 ## Task 4: Audit CloudWatch metrics and alarms
@@ -207,17 +236,31 @@ Amazon CloudWatch is a monitoring and management service built for developers, s
 ### Audit CloudWatch metrics and alarms
 
 37. At the top of the AWS Management Console, in the search bar, search for and choose CloudWatch.
+
+<img src="https://imgur.com/melz5r6.jpg" height="80%" width="80%" alt="CloudWatch launch"/>
+
 38. In the navigation pane at the left of the page, in the Metrics section, choose All metrics.
 39. On the Browse tab, choose EC2.
+
+<img src="https://imgur.com/wsKBqOg.jpg" height="80%" width="80%" alt="CloudWatch EC2 metrics"/>
+
 40. Choose Per-Instance Metrics.
+
+<img src="https://imgur.com/yxjQalq.jpg" height="80%" width="80%" alt="CloudWatch CPUUtilization metrics"/>
+
 41. In the Search box, search for CPUUtilization.
    
-> Expected output: The search results should display the three EC2 instance that you reviewed previously.
+> Expected output: The search results should display the three EC2 instances that you reviewed previously.
 
 42. Select SQL Server.
+
+<img src="https://imgur.com/wdkXlAy.jpg" height="80%" width="80%" alt="CloudWatch CPUUtilization metrics select"/>
+
 43. Choose the Graphed metrics tab.
    
 > Note: You can change the Statistic and the Period settings to customize the view to your liking.
+
+<img src="https://imgur.com/bSSzpsH.jpg" height="80%" width="80%" alt="SQL Graphed metrics"/>
 
 ### Review CloudWatch data for EBS volumes
 
