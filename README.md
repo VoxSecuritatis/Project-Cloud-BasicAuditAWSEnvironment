@@ -27,6 +27,10 @@ AWS Identity and Access Management (IAM) enables the engineer to securely contro
 
 In this project, the auditor will launch IAM secure AWS Access Control in order to review permissions, group assignments and roles associated with the auditing instance:
 
+Launch the AWS Console:
+
+<img src="https://imgur.com/4znV30l.jpg" height="80%" width="80%" alt="Open AWS Console"/>
+
 ### Review permissions
 
 1. At the top of the AWS Management Console, in the search bar, search for and choose IAM.
