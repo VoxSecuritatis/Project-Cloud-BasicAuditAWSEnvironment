@@ -341,6 +341,14 @@ An alternate approach to viewing Amazon CloudTrail logs is to download them loca
 
 AWS partners with third-party specialists in logging and analysis to provide solutions that leverage Amazon CloudTrail output, such as Splunk or Alert Logic.
 
+## End project
+
+Follow these steps to close the console and end your project.
+
+60. Return to the AWS Management Console.
+61. At the upper-right corner of the page, choose the active user, and then choose Sign out.
+62. This completes the project.
+
 ## Conclusion
 
 The following actions were taken:
@@ -350,14 +358,6 @@ The following actions were taken:
 - Reviewed Amazon VPC configurations, subnets, and Network ACLs.
 - Reviewed Amazon CloudWatch performance metrics.
 - Reviewed raw Amazon CloudTrail logs within Amazon S3.
-
-## End project
-
-Follow these steps to close the console and end your project.
-
-60. Return to the AWS Management Console.
-61. At the upper-right corner of the page, choose the active user, and then choose Sign out.
-62. This completes the project.
 
 ## Additional Resources
 
