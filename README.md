@@ -267,15 +267,22 @@ Amazon CloudWatch is a monitoring and management service built for developers, s
 In addition to viewing Amazon CloudWatch metrics and alarms via the CloudWatch dashboard, one can also view the data in other locations. In this section, the auditor will review Amazon CloudWatch data for Amazon EBS volumes.
 
 44. At the top of the AWS Management Console, in the search bar, search for and choose EC2.
+
+<img src="https://imgur.com/voBWnol.jpg" height="80%" width="80%" alt="EC2 launch"/>
+
 45. In the navigation pane at the left of the page, under Elastic Block Store, choose Volumes.
 46. Select the Volume that is attached to the Web Server instance.
    
 > Note: To review the volume names and their attached instances, one might need to scroll to the right until they see the Attached Instances column header.
 
+<img src="https://imgur.com/wbL43rt.jpg" height="80%" width="80%" alt="EC2 WebServer select"/>
+
 47. In the details pane at the bottom of the page, choose the Monitoring tab.
 48. Review the CloudWatch metrics and any configured CloudWatch alarms.
    
 > Note: Amazon CloudWatch metrics can directly support several auditing elements and provide real-time audit evidence based on predefined criteria and custom criteria related to organization processes.
+
+<img src="https://imgur.com/wfLpFYs.jpg" height="80%" width="80%" alt="EC2 Web Server monitoring"/>
 
 ## Task 5: Audit CloudTrail logs
 
@@ -286,21 +293,47 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 ### Find CloudTrail logs
 
 49. At the top of the AWS Management Console, in the search bar, search for and choose CloudTrail.
+
+<img src="https://imgur.com/S3eqtSE.jpg" height="80%" width="80%" alt="CloudTrail launch"/>
+
 50. In the navigation pane at the left of the page, choose Trails.
+
+<img src="https://imgur.com/8Vd68T2.jpg" height="80%" width="80%" alt="CloudTrail Trails select"/>
+
 51. Choose the LabCloudTrail link to view its details.
 52. Review the CloudTrail configuration details.
+
+<img src="https://imgur.com/nyzF9mI.jpg" height="80%" width="80%" alt="CloudTrail LabCloudTrail details"/>
+
 53. At the top of the AWS Management Console, in the search bar, search for and choose S3.
-54. Choose the link for the bucket name that starts with spl73logs.
+
+<img src="https://imgur.com/rELNHZ0.jpg" height="80%" width="80%" alt="Launch S3"/>
+
+54. Choose the link for the bucket name of interest.
+
+<img src="https://imgur.com/QnEg4Dp.jpg" height="80%" width="80%" alt="Select S3 bucket"/>
+
 55. Choose the AWSLogs/ link.
+
+<img src="https://imgur.com/LpWidxv.jpg" height="80%" width="80%" alt="S3 Object details"/>
+
 56. Continue selecting the links for the various folders until you get to a folder that represents the region your project was launched in.
    
 > Note: The Region value is listed to the left of these instructions.
 
 57. Continue selecting the links for the various folders, which represent today’s date, until you see a log file. The log file name contains the AWS account number, AWS region, a numeric representation of the day’s date and time, and a unique identifier, similar to this: `000044446666_CloudTrail_us-east-1_20250225T1935Z_ZBBrnLsySt8ZdwGnQ.json.gz`.
+
+<img src="https://imgur.com/G9XKdAg.jpg" height="80%" width="80%" alt="Select log file"/>
+
 58. Choose the link for one of the log files, with a file name that ends in `json.gz`.
+
+<img src="https://imgur.com/FaehmAC.jpg" height="80%" width="80%" alt="Choose log file"/>
+
 59. Choose Open.
    
 > Expected output: Depending on web browser settings, a new window or a new tab opens that displays the contents of the log file. It is in JSON format.
+
+<img src="https://imgur.com/N7ZOWTc.jpg" height="80%" width="80%" alt="Log details"/>
 
 An alternate approach to viewing Amazon CloudTrail logs is to download them locally and use a text editor along with the JSON Viewer plug-in.
 
