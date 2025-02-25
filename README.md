@@ -73,13 +73,21 @@ The auditor can use the IAM Policy Simulator to test the effects of AWS IAM poli
 
 7. Choose the Permissions tab. In the Permissions policies section, notice there is one policy attached to the user. The Attached via column shows that the ReadOnlyAccess policy is attached to user-1 via the user1group IAM group.
 8. To run the IAM Policy Simulator, open the following link in a new web browser tab: [IAM Policy Simulator](https://policysim.aws.amazon.com/home/index.jsp?#).
+
+<img src="https://imgur.com/YF4agZE.jpg" height="80%" width="80%" alt="Launch IAM Policy Simulator"/>
+
 9. On the IAM Policy Simulator page, in the Users, Groups, and Roles pane, choose user-1.
 10. In the Policy Simulator pane, on the Select service drop-down menu, choose Identity and Access Management.
 11. On the Select actions drop-down menu, select the following options:
     - DeleteGroup
     - DeleteRolePolicy
 
+<img src="https://imgur.com/cj1xvW2.jpg" height="80%" width="80%" alt="Policy Simulator Audit"/>
+
+
 12. Choose Run Simulation.
+
+<img src="https://imgur.com/6KZqGzF.jpg" height="80%" width="80%" alt="Policy Simulator Run"/>
 
 > Expected output: The Action Settings and Results section displays the effective permissions for user-1, similar to this:
 
@@ -87,6 +95,8 @@ The auditor can use the IAM Policy Simulator to test the effects of AWS IAM poli
 |------------------------------------|------------------|---------------|---------------------|----------------------------------------------------|
 | AWS Identity and Access Management | DeleteGroup      | group         | *                   | denied Implicitly denied (no matching statements). |
 | AWS Identity and Access Management | DeleteRolePolicy | role          | *                   | denied Implicitly denied (no matching statements). |
+
+<img src="https://imgur.com/E6Wwcyr.jpg" height="80%" width="80%" alt="Policy Simulator Results"/>
 
 13. Close the IAM Policy Simulator web browser tab.
 
