@@ -246,9 +246,6 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 50. In the navigation pane at the left of the page, choose Trails.
 51. Choose the LabCloudTrail link to view its details.
 52. Review the CloudTrail configuration details.
-   
-> Note: The LabCloudTrail trail was created using AWS CloudFormation when you started the project. It’s configured to store logs in the Amazon S3 bucket with a name that starts with SPL73Logs, as defined by the Trail log location property.
-
 53. At the top of the AWS Management Console, in the search bar, search for and choose S3.
 54. Choose the link for the bucket name that starts with spl73logs.
 55. Choose the AWSLogs/ link.
